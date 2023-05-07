@@ -1,6 +1,5 @@
 /// <reference types="cypress" />
 
-
 describe('Context: My First Tests', () => {
     before(() => {
         // runs once before all test cases in this describe block, like beforeClass in TestNG 
@@ -15,12 +14,19 @@ describe('Context: My First Tests', () => {
     afterEach(() => {
         // similar to afterMethod in TestNG
     })
-    it('Opening a web application', () => {
+    it.skip('Opening a web application', () => {
         cy.visit('/registration_form');
-        // cy.get('.list-group > :nth-child(1) > a').click();
-        // cy.go('back');
-        // cy.get(':nth-child(8) > a').click();
-        // cy.reload();
-        
+    })
+    xit('Test 2', () => {
+        expect(false).to.equal(false);
+    })
+    it('Test 3', () => {
+        expect(false).not.to.equal(true);
+    })
+    it('Test 4', () => {
+        expect(5).to.equal(5);
+    })
+    it('Test 5', () => {
+        expect(true).to.equal('5'==5);
     })
 })
