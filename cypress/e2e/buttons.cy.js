@@ -27,7 +27,7 @@ describe('Context: My First Tests', () => {
 
     // I will get all buttons like previous approach, get only the item then check for text of each item, if it is equal to Button 4, then click on it
     cy.get('button').each((item) => {
-      if (item.text() == 'Button 4') {
+      if (item.text() === 'Button 4') {
         cy.log(item.text()); // this command write the text at the test console
         // item.click(); // you cannot use cypress click func on jQuery element
         cy.wrap(item).click();
