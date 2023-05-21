@@ -3,6 +3,7 @@ const username = `user${Math.floor(Math.random() * 100000 + 100000)
   .substring(1)}`;
 const passWord = 'Test123456!';
 
+
 describe('E2E - Test API integrated UI Test', () => {
   beforeEach('create a user and generate token from API and set cookies', () => {
     // following API requset is for creating user and setting cookies for the test
